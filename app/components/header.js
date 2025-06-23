@@ -26,8 +26,8 @@ export default function Header() {
                 {isDropdownOpen && (
                   <div className="dropdown-content">
                     <a href="/about">About Us</a>
-                    <a href="/careers">Careers</a> {/* Assuming #careers if not a full page */}
-                    <a href="/contact">Contact Us</a> {/* Assuming #contact if not a full page */}
+                    <a href="/careers">Careers</a>
+                    <a href="/contact">Contact Us</a>
                   </div>
                 )}
               </li>
@@ -35,9 +35,10 @@ export default function Header() {
               <li><a href="#academic">Academic</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/gallery">Gallery</a></li>
+              {/* Contact Us button remains distinct */}
               <li><a href="#contact" className="contact-btn">Contact Us</a></li>
-              {/* Reverted size to 20 to allow CSS to control explicitly */}
-              <li><Search className="search-icon" size={20} /></li>
+              {/* Removed size prop to allow CSS to control it fully */}
+              <li><Search className="search-icon" /></li>
             </ul>
           </nav>
         </div>
@@ -68,7 +69,7 @@ export default function Header() {
         .logo {
           font-size: 1.8rem;
           font-weight: 700;
-          color: white; /* Changed to white */
+          color: white;
           text-decoration: none;
           display: flex;
           align-items: center;
@@ -76,7 +77,7 @@ export default function Header() {
         }
 
         .logo-icon {
-          background-color: #4a00e0; /* Still a distinct purple */
+          background-color: #4a00e0;
           color: white;
           padding: 0.2rem 0.5rem;
           border-radius: 5px;
@@ -93,14 +94,17 @@ export default function Header() {
         }
 
         .nav li a {
-          color: white; /* Changed to white */
+          color: white;
           text-decoration: none;
           font-weight: 500;
-          transition: color 0.3s ease;
+          padding: 0.5rem 0.8rem; /* Added padding for hover effect */
+          border-radius: 8px; /* Rounded corners for hover effect */
+          transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color to transition */
         }
 
         .nav li a:hover {
-          color: #a0a0a0; /* Lighter shade for hover */
+          color: #4a00e0; /* Dark purple text on hover */
+          background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
         }
 
         /* Dropdown specific styles */
@@ -113,36 +117,36 @@ export default function Header() {
         }
 
         .dropdown-content {
-          display: block; /* Always block for 'isDropdownOpen' to show/hide it */
+          display: block;
           position: absolute;
-          background-color: #360065; /* Same as header background */
+          background-color: #360065;
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 1;
-          top: 100%; /* Position below the About Us link */
+          top: 100%;
           left: 0;
           border-radius: 5px;
-          overflow: hidden; /* For rounded corners on children */
+          overflow: hidden;
         }
 
         .dropdown-content a {
-          color: white; /* White text for dropdown items */
+          color: white;
           padding: 12px 16px;
           text-decoration: none;
           display: block;
           text-align: left;
-          transition: background-color 0.3s ease;
-          white-space: nowrap; /* Prevent wrapping */
+          transition: background-color 0.3s ease, color 0.3s ease; /* Ensure smooth transition for dropdown items */
+          white-space: nowrap;
         }
 
         .dropdown-content a:hover {
-          background-color: #4a00e0; /* Darker purple on hover */
-          color: white; /* Ensure text remains white */
+          background-color: #4a00e0; /* Darker purple on hover for dropdown items */
+          color: white;
         }
 
         .contact-btn {
-          background-color: #4a00e0; /* Dark purple/blue */
-          color: white !important; /* Override default link color */
+          background-color: #4a00e0;
+          color: white !important;
           padding: 0.5rem 1rem;
           border-radius: 20px;
           transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -150,21 +154,20 @@ export default function Header() {
         }
 
         .contact-btn:hover {
-          background-color: #3a00b0; /* Darker purple/blue */
-          border-color: #1aff8c; /* Slightly different color on hover for visual feedback */
+          background-color: #3a00b0;
+          border-color: #1aff8c;
         }
 
         .search-icon {
           color: white;
           cursor: pointer;
           transition: color 0.3s ease;
-          position: relative; /* Ensure positioning context for potential children */
+          position: relative;
         }
 
-        /* Explicitly target the SVG inside the icon for size control */
         .search-icon svg {
-          width: 24px;
-          height: 24px;
+          width: 100px; /* Increased size for the search icon to 100px */
+          height: 100px; /* Increased size for the search icon to 100px */
         }
 
         .search-icon:hover {
@@ -189,20 +192,20 @@ export default function Header() {
           }
 
           .dropdown-content {
-            position: static; /* Stack dropdown items normally on small screens */
+            position: static;
             box-shadow: none;
-            background-color: transparent; /* No background for dropdown on mobile */
-            width: 100%; /* Take full width */
+            background-color: transparent;
+            width: 100%;
             text-align: center;
           }
 
           .dropdown-content a {
-            padding: 8px 16px; /* Smaller padding */
-            color: #ccc; /* Lighter color for visibility on mobile nav */
+            padding: 8px 16px;
+            color: #ccc;
           }
 
           .dropdown-content a:hover {
-            background-color: rgba(255,255,255,0.1); /* Subtle hover for mobile */
+            background-color: rgba(255,255,255,0.1);
           }
         }
       `}</style>
