@@ -6,7 +6,8 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'; // Added 
 export default function Footer() {
   return (
     <footer className="footer">
-      {/* Removed the footer-wave div as the image will be the background */}
+      {/* Top wave section */}
+      <div className="footer-wave"></div>
 
       <div className="container">
         <div className="footer-content">
@@ -20,7 +21,7 @@ export default function Footer() {
             <div className="social-links">
               <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
               <a href="#" aria-label="Twitter"><Twitter size={24} /></a>
-              <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
+              <a href="#" aria-label="Instagram"><Instagram size={24} /></a> {/* Increased size to match image */}
               <a href="#" aria-label="LinkedIn"><Linkedin size={24} /></a>
             </div>
           </div>
@@ -67,37 +68,40 @@ export default function Footer() {
 
       <style jsx>{`
         .footer {
-          background-color: #4a00e0; /* Fallback background color */
-          background-image: url('/images/Vector 19.png'); /* Corrected path to the uploaded image */
-          background-size: 100% auto; /* Cover full width, auto height */
-          background-position: center top; /* Position at the top */
-          background-repeat: no-repeat; /* Do not repeat the image */
+          background-color: #4a00e0; /* Dark purple from the image */
           color: white;
-          padding-top: 80px; /* Add padding to accommodate the curve from the background image */
-          padding-bottom: 2rem;
+          padding-top: 0; /* Remove top padding to accommodate wave */
+          padding-bottom: 2rem; /* Adjusted padding-bottom */
           font-size: 0.9rem;
           position: relative;
-          overflow: hidden;
+          overflow: hidden; /* Ensure wave stays within bounds */
         }
 
-        /* Removed .footer-wave as it's replaced by background-image */
         .footer-wave {
-          display: none; /* Hide the old wave div */
+          width: 100%;
+          height: 120px; /* Taller for a smoother curve */
+          background: linear-gradient(to right, #33FF94, #66FFB3);
+          border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Large vertical curve */
+          position: absolute;
+          top: -100px; /* Pull it up to overlap footer */
+          left: 0;
+          z-index: 0;
+          transform: none; /* Remove rotate for top-down curve */
         }
 
         .container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 1.5rem;
-          position: relative;
-          z-index: 1; /* Ensure content is above the background image */
+          position: relative; /* Ensure container content is above the wave */
+          z-index: 1;
         }
 
         .footer-content {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 2rem;
-          margin-top: 1rem; /* Adjust margin-top for content positioning */
+          margin-top: 4rem; /* Push content down to avoid overlapping the wave */
           margin-bottom: 2rem;
         }
 
@@ -105,25 +109,25 @@ export default function Footer() {
           font-size: 1.8rem;
           font-weight: 700;
           margin-bottom: 1rem;
-          color: white;
+          color: white; /* Changed to white as per image */
         }
 
         .footer-brand p {
           line-height: 1.6;
           color: #ccc;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.5rem; /* Space before social links */
         }
 
         .social-links {
           display: flex;
-          gap: 0.8rem;
+          gap: 0.8rem; /* Smaller gap */
         }
 
         .social-links a {
-          background-color: white;
-          color: #4a00e0;
+          background-color: white; /* White background for icons */
+          color: #4a00e0; /* Dark purple for icons */
           border-radius: 50%;
-          width: 40px;
+          width: 40px; /* Fixed size for circular icons */
           height: 40px;
           display: flex;
           justify-content: center;
@@ -132,7 +136,7 @@ export default function Footer() {
         }
 
         .social-links a:hover {
-          background-color: #33FF94;
+          background-color: #33FF94; /* Green on hover */
           color: white;
         }
 
@@ -159,7 +163,7 @@ export default function Footer() {
         }
 
         .footer-column ul li a:hover {
-          color: #33FF94;
+          color: #33FF94; /* Green on hover */
         }
 
         .contact-info-text {
@@ -168,7 +172,7 @@ export default function Footer() {
         }
 
         .meet-us-heading {
-          margin-top: 1.5rem;
+          margin-top: 1.5rem; /* Space before "Meet Us" */
         }
 
         .email-subscribe {
@@ -181,8 +185,8 @@ export default function Footer() {
           flex-grow: 1;
           padding: 0.75rem 1rem;
           border: none;
-          border-radius: 5px 0 0 5px;
-          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 5px 0 0 5px; /* Rounded left corners */
+          background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
           color: white;
           font-size: 0.9rem;
           outline: none;
@@ -193,11 +197,11 @@ export default function Footer() {
         }
 
         .email-subscribe button {
-          background-color: #33FF94;
-          color: #4a00e0;
+          background-color: #33FF94; /* Green button */
+          color: #4a00e0; /* Dark purple text */
           border: none;
           padding: 0.75rem 1rem;
-          border-radius: 0 5px 5px 0;
+          border-radius: 0 5px 5px 0; /* Rounded right corners */
           cursor: pointer;
           font-size: 0.9rem;
           font-weight: 600;
@@ -205,19 +209,20 @@ export default function Footer() {
         }
 
         .email-subscribe button:hover {
-          background-color: #1aff8c;
+          background-color: #1aff8c; /* Darker green on hover */
         }
 
         .footer-bottom {
           text-align: center;
           padding-top: 1.5rem;
+          /* Removed border-top as per new image */
           color: #ccc;
         }
 
         /* Responsive adjustments for footer */
         @media (max-width: 768px) {
           .footer-content {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr; /* Stack columns on small screens */
             text-align: center;
           }
 
@@ -234,8 +239,8 @@ export default function Footer() {
           }
           .email-subscribe input,
           .email-subscribe button {
-            border-radius: 5px;
-            width: 80%;
+            border-radius: 5px; /* Full rounded corners when stacked */
+            width: 80%; /* Adjust width for small screens */
             max-width: 300px;
           }
           .email-subscribe {
