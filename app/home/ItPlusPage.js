@@ -1,5 +1,3 @@
-
-
 const ItPlusPage = () => {
   return (
     <div className="it-plus-container">
@@ -7,12 +5,9 @@ const ItPlusPage = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1>SIMPLIFYING IT WITH </h1>
-          <img 
-        src="/images/logo_r.png" 
-        alt="" 
-        className="it-plus-logo"
-      />
-          <p>Where Technology, Innovation, and Training Meet</p><br />
+          <img src="/logo_r.png" alt="aaa" className="it-plus-logo" />
+          <p>Where Technology, Innovation, and Training Meet</p>
+          <br />
           <div className="hero-buttons">
             <button className="live-help-button">Live Help</button>
             <button className="contact-button">Contact</button>
@@ -26,28 +21,28 @@ const ItPlusPage = () => {
         <p className="subtitle">Expert to Make IT Perfect</p>
         <div className="services-grid">
           <div className="service-card technology">
-            <div className="card-image-placeholder"></div>
             <h3>Technology</h3>
+            <div className="card-image-placeholder"></div>
           </div>
           <div className="service-card cloud">
-            <div className="card-image-placeholder"></div>
             <h3>Cloud</h3>
+            <div className="card-image-placeholder"></div>
           </div>
           <div className="service-card software">
-            <div className="card-image-placeholder"></div>
             <h3>Software</h3>
+            <div className="card-image-placeholder"></div>
           </div>
           <div className="service-card it-support">
-            <div className="card-image-placeholder"></div>
             <h3>IT Support</h3>
+            <div className="card-image-placeholder"></div>
           </div>
           <div className="service-card it-products">
-            <div className="card-image-placeholder"></div>
             <h3>IT Products</h3>
+            <div className="card-image-placeholder"></div>
           </div>
           <div className="service-card academic">
-            <div className="card-image-placeholder"></div>
             <h3>Academic</h3>
+            <div className="card-image-placeholder"></div>
           </div>
         </div>
       </section>
@@ -58,11 +53,11 @@ const ItPlusPage = () => {
           <h2>Who is IT Plus</h2>
           <p>
             In today&apos;s fast-paced digital world, your business needs more
-            than just technology—it needs a trusted partner. That&apos;s what
-            IT Plus comes in. We deliver secure, scalable IT solutions
-            including networking, Wi-Fi, VoIP, CCTV, and full IT support—
-            tailored to your unique needs. With IT Plus, your business is
-            ready to thrive, grow, and stay connected.
+            than just technology—it needs a trusted partner. That&apos;s what IT
+            Plus comes in. We deliver secure, scalable IT solutions including
+            networking, Wi-Fi, VoIP, CCTV, and full IT support— tailored to your
+            unique needs. With IT Plus, your business is ready to thrive, grow,
+            and stay connected.
           </p>
           <button className="our-story-button">Our Story</button>
         </div>
@@ -114,7 +109,8 @@ const ItPlusPage = () => {
           background: linear-gradient(135deg, #7A4ADF 0%, #360065 100%);
           color: white;
           width: 106%;
-          padding: 100px 1px 1px 600px;
+          padding: 180px 10px 10px 300px
+          ;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -139,14 +135,17 @@ const ItPlusPage = () => {
         }
 
         .hero-section p {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           margin-bottom: 30px;
+          font_family: 'outfit';
           opacity: 0.9;
         }
 
         .hero-buttons {
           display: flex;
           justify-content: center;
+          height: 50px;
+          width: 100;
           gap: 20px;
           flex-wrap: wrap;
         }
@@ -248,6 +247,7 @@ const ItPlusPage = () => {
 
         .service-card.technology::before { 
           background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b') center/cover;
+          // background-image: url('/images/technology-bg.png');
         }
         .service-card.cloud::before { 
           background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5') center/cover;
@@ -267,27 +267,42 @@ const ItPlusPage = () => {
 
         .service-card h3 {
           font-size: 1.8rem;
-          margin-top: 10px;
+          margin-top: 0px;
           position: relative;
           z-index: 1;
           font-weight: 600;
-          margin-bottom: 0;
+          margin-bottom: 20;
         }
 
         .card-image-placeholder {
-          width: 80px;
-          height: 80px;
-          background-color: rgba(255, 255, 255, 0.3);
+          width: 60px;
+          height: 60px;
+          background-color:  #440B44;;
+          
           border-radius: 50%;
           margin-bottom: 20px;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 2rem;
+          // font-size: 2rem;
           position: relative;
           z-index: 1;
           backdrop-filter: blur(10px);
         }
+
+
+.card-image-placeholder::after {
+    content: '➠'; /* Green right arrow */ 
+    font-size: 2.2rem;
+    color:rgb(20, 218, 99); /* Match the green arrow color from the design */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
 
         /* Who is IT Plus Section */
         .who-is-it-plus-section {

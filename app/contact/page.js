@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react'; // Import useEffect and useRef
-import Header from '../components/header';
+import { useEffect, useRef } from 'react'; // Import useEffect and useRef
 import Footer from '../components/footer';
+import Header from '../components/header';
 
 export default function ContactUsPage() {
   // Refs for observing elements
@@ -69,8 +69,7 @@ export default function ContactUsPage() {
           <div className="contact-content-wrapper">
             <div className="map-placeholder" ref={mapRef}>
               {/* Actual map image is now used from a different URL */}
-              <img
-                src="https://placehold.co/600x400/9b59b6/ffffff?text=New+Map+Location" // Updated image URL
+              <img src="/map.png" 
                 alt="Our Location Map"
                 className="map-image"
               />
