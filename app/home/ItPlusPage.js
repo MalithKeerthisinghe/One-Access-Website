@@ -112,8 +112,9 @@ const ItPlusPage = () => {
           position: relative; /* For the curve */
           overflow: hidden;
           padding-bottom: 120px; /* Space for the curve */
-          border-radius: 0 0 50% 50% / 0 0 10% 10%; /* Creates the top curve */
-          box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
+          /* Adjusted border-radius for a downward curve at the BOTTOM */
+          border-radius: 0 0 50% 50% / 0 0 100px 100px; /* Horizontal 50%, Vertical 100px */
+          box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2); /* Adjusted shadow for bottom curve */
         }
 
         .hero-section h1 {
