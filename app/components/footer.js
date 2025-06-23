@@ -1,86 +1,103 @@
 'use client'; // This component uses client-side features (lucide-react)
 
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'; // Added Instagram
 
 export default function Footer() {
   return (
     <footer className="footer">
+      {/* Removed the footer-wave div as the image will be the background */}
+
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
             <h3>IT PLUS</h3>
             <p>
-              Empowering businesses with innovative technology solutions,
-              reliable network infrastructure, and comprehensive IT support
-              services across Sri Lanka.
+              Digital solutions for specialized IT solutions, ideal for
+              startups and businesses seeking to enhance their digital
+              presence.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook"><Facebook size={16} /></a>
-              <a href="#" aria-label="Twitter"><Twitter size={16} /></a>
-              <a href="#" aria-label="LinkedIn"><Linkedin size={16} /></a>
-              <a href="#" aria-label="Instagram"><Instagram size={16} /></a>
+              <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
+              <a href="#" aria-label="Twitter"><Twitter size={24} /></a>
+              <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
+              <a href="#" aria-label="LinkedIn"><Linkedin size={24} /></a>
             </div>
           </div>
 
           <div className="footer-column">
-            <h4>Company</h4>
+            <h4>COMPANY</h4>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#">Influencer</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About us</a></li>
               <li><a href="#">Contact</a></li>
-              <li><a href="#">Blog</a></li>
             </ul>
           </div>
 
           <div className="footer-column">
-            <h4>Services</h4>
+            <h4>SERVICES</h4>
             <ul>
-              <li><a href="#">Network Solutions</a></li>
-              <li><a href="#">Wi-Fi Systems</a></li>
-              <li><a href="#">VoIP Training</a></li>
+              <li><a href="#">CRM</a></li>
+              <li><a href="#">LMS</a></li>
+              <li><a href="#">User Testing</a></li>
               <li><a href="#">Web Development</a></li>
               <li><a href="#">Mobile Development</a></li>
             </ul>
           </div>
 
           <div className="footer-column">
-            <h4>Contact us</h4>
-            <ul>
-              <li><a href="#">+94 123 456 789</a></li>
-              <li><a href="#">info@itplus.lk</a></li>
-            </ul>
-            <h4 className="follow-us-heading">Follow us</h4>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">LinkedIn</a></li>
-            </ul>
+            <h4>CONTACT US</h4>
+            <p className="contact-info-text">info@itplus.com</p>
+            <h4 className="meet-us-heading">MEET US IN</h4>
+            <p className="contact-info-text">Colombo Sri Lanka</p>
+            <div className="email-subscribe">
+              <input type="email" placeholder="Enter your email" />
+              <button className="email-button">Contact</button>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 IT Plus. All rights reserved.</p>
+          {/* Copyright text is not visible in the provided image, so keeping it simple */}
+          {/* <p>&copy; 2024 IT Plus. All rights reserved.</p> */}
         </div>
       </div>
 
       <style jsx>{`
         .footer {
-          background-color: #2c3e50; /* Dark blue/gray */
+          background-color: #4a00e0; /* Fallback background color */
+          background-image: url('/images/Vector 19.png'); /* Corrected path to the uploaded image */
+          background-size: 100% auto; /* Cover full width, auto height */
+          background-position: center top; /* Position at the top */
+          background-repeat: no-repeat; /* Do not repeat the image */
           color: white;
-          padding: 3rem 0;
+          padding-top: 80px; /* Add padding to accommodate the curve from the background image */
+          padding-bottom: 2rem;
           font-size: 0.9rem;
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Removed .footer-wave as it's replaced by background-image */
+        .footer-wave {
+          display: none; /* Hide the old wave div */
         }
 
         .container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 1.5rem;
+          position: relative;
+          z-index: 1; /* Ensure content is above the background image */
         }
 
         .footer-content {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 2rem;
+          margin-top: 1rem; /* Adjust margin-top for content positioning */
           margin-bottom: 2rem;
         }
 
@@ -88,27 +105,35 @@ export default function Footer() {
           font-size: 1.8rem;
           font-weight: 700;
           margin-bottom: 1rem;
-          color: #4a00e0; /* Match logo color */
+          color: white;
         }
 
         .footer-brand p {
           line-height: 1.6;
           color: #ccc;
+          margin-bottom: 1.5rem;
         }
 
         .social-links {
           display: flex;
-          gap: 1rem;
-          margin-top: 1rem;
+          gap: 0.8rem;
         }
 
         .social-links a {
-          color: white;
-          transition: color 0.3s ease;
+          background-color: white;
+          color: #4a00e0;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .social-links a:hover {
-          color: #4a00e0; /* Dark purple/blue on hover */
+          background-color: #33FF94;
+          color: white;
         }
 
         .footer-column h4 {
@@ -134,24 +159,65 @@ export default function Footer() {
         }
 
         .footer-column ul li a:hover {
-          color: #4a00e0; /* Dark purple/blue on hover */
+          color: #33FF94;
         }
 
-        .follow-us-heading {
-          margin-top: 1.5rem; /* Add some space */
+        .contact-info-text {
+          color: #ccc;
+          margin-bottom: 0.5rem;
+        }
+
+        .meet-us-heading {
+          margin-top: 1.5rem;
+        }
+
+        .email-subscribe {
+          display: flex;
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        .email-subscribe input {
+          flex-grow: 1;
+          padding: 0.75rem 1rem;
+          border: none;
+          border-radius: 5px 0 0 5px;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: white;
+          font-size: 0.9rem;
+          outline: none;
+        }
+
+        .email-subscribe input::placeholder {
+          color: #eee;
+        }
+
+        .email-subscribe button {
+          background-color: #33FF94;
+          color: #4a00e0;
+          border: none;
+          padding: 0.75rem 1rem;
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+          font-size: 0.9rem;
+          font-weight: 600;
+          transition: background-color 0.3s ease;
+        }
+
+        .email-subscribe button:hover {
+          background-color: #1aff8c;
         }
 
         .footer-bottom {
           text-align: center;
           padding-top: 1.5rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
           color: #ccc;
         }
 
         /* Responsive adjustments for footer */
         @media (max-width: 768px) {
           .footer-content {
-            grid-template-columns: 1fr; /* Stack columns on small screens */
+            grid-template-columns: 1fr;
             text-align: center;
           }
 
@@ -161,6 +227,21 @@ export default function Footer() {
 
           .social-links {
             justify-content: center;
+          }
+
+          .email-subscribe {
+            justify-content: center;
+          }
+          .email-subscribe input,
+          .email-subscribe button {
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px;
+          }
+          .email-subscribe {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
           }
         }
       `}</style>
