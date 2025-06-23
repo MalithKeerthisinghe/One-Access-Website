@@ -17,7 +17,7 @@ export default function Header() {
               <li><a href="/about">About Us</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#academic">Academic</a></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a href="/blog">Blog</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contact" className="contact-btn">Contact Us</a></li>
               <li><Search className="search-icon" size={20} /></li>
