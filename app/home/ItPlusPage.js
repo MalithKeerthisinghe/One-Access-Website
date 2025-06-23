@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 const ItPlusPage = () => {
   return (
@@ -7,8 +6,13 @@ const ItPlusPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>SIMPLIFYING IT WITH IT PLUS</h1>
-          <p>Where Technology, Innovation, and Training Meet</p>
+          <h1>SIMPLIFYING IT WITH </h1>
+          <img 
+        src="/images/logo_r.png" 
+        alt="" 
+        className="it-plus-logo"
+      />
+          <p>Where Technology, Innovation, and Training Meet</p><br />
           <div className="hero-buttons">
             <button className="live-help-button">Live Help</button>
             <button className="contact-button">Contact</button>
@@ -107,19 +111,22 @@ const ItPlusPage = () => {
 
         /* Hero Section */
         .hero-section {
-          background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+          background: linear-gradient(135deg, #7A4ADF 0%, #360065 100%);
           color: white;
-          padding: 80px 20px 120px;
+          width: 106%;
+          padding: 100px 1px 1px 600px;
           text-align: center;
           position: relative;
           overflow: hidden;
           border-radius: 0 0 50% 50% / 0 0 100px 100px;
           box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
+          
         }
 
         .hero-content {
-          max-width: 800px;
+          max-width: 100%;
           margin: 0 auto;
+          padding: 100px 20px 50px;
         }
 
         .hero-section h1 {
@@ -128,6 +135,7 @@ const ItPlusPage = () => {
           letter-spacing: 1px;
           font-weight: 700;
           margin-top: 0;
+          font-family: 'Outfit';
         }
 
         .hero-section p {
