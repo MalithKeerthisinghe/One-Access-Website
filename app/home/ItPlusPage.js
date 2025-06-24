@@ -54,8 +54,11 @@ const ItPlusPage = () => {
             <h2>
               Who is
               <img
-                src="/logo_r.png" alt="IT Plus Logo" className="who-is-logo" style={{ width: '100px', height: '100px', marginLeft: '10px' }
-  }/>
+                src="/logo_r.png"
+                alt="IT Plus Logo"
+                className="who-is-logo"
+                style={{ width: "100px", height: "100px", marginLeft: "10px" }}
+              />
             </h2>
           </div>
           <p>
@@ -75,45 +78,155 @@ const ItPlusPage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-<section className="why-choose-us-section">
+      <section className="why-choose-us-section">
         <h2>Why Choose Us</h2>
         <p className="subtitle">Your Trusted IT Partner in Sri Lanka</p>
         <div className="benefits-grid">
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/expert-team.png" alt="Expert Team Icon" className="benefit-icon" />
+              <img
+                src="/expert-team.png"
+                alt="Expert Team Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>Expert Team</h3>
           </div>
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/innovative-solutions.png" alt="Innovative Solutions Icon" className="benefit-icon" />
+              <img
+                src="/innovative-solutions.png"
+                alt="Innovative Solutions Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>Innovative Solutions</h3>
           </div>
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/24x7-support.png" alt="24x7 Support Icon" className="benefit-icon" />
+              <img
+                src="/24x7-support.png"
+                alt="24x7 Support Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>24x7 Support</h3>
           </div>
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/focus-on-quality.png" alt="Focus on Quality Icon" className="benefit-icon" />
+              <img
+                src="/focus-on-quality.png"
+                alt="Focus on Quality Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>Focus on Quality</h3>
           </div>
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/certified-trainers.png" alt="Certified Trainers Icon" className="benefit-icon" />
+              <img
+                src="/certified-trainers.png"
+                alt="Certified Trainers Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>Certified Trainers</h3>
           </div>
           <div className="benefit-card">
             <div className="icon-wrapper">
-              <img src="/job-placement.png" alt="Job Placement Icon" className="benefit-icon" />
+              <img
+                src="/job-placement.png"
+                alt="Job Placement Icon"
+                className="benefit-icon"
+              />
             </div>
             <h3>Job Placement</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Clients In Success Section - NEW SECTION */}
+      <section className="clients-section">
+        <div className="clients-container">
+          <h2>Our Clients In Success</h2>
+          <div className="clients-grid">
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/durdans.png"
+                alt="Durdans Hospital Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/vision-care.png"
+                alt="Vision Care Optical Services Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/cinnamon-hotels.png"
+                alt="Cinnamon Hotels Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/client4.png"
+                alt="Client 4 Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/client5.png"
+                alt="Client 5 Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/client6.png"
+                alt="Client 6 Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/clevr.png"
+                alt="Clevr Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/eboola.png"
+                alt="Eboola Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/isi.png"
+                alt="ISI Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/tradarea.png"
+                alt="Tradarea Logo"
+                className="client-logo"
+              />
+            </div>
+            <div className="client-logo-wrapper">
+              <img
+                src="/images/clients/firewall.png"
+                alt="Firewall.lk Logo"
+                className="client-logo"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -337,7 +450,7 @@ const ItPlusPage = () => {
 
         /* Who is IT Plus Section */
         .who-is-it-plus-section {
-          background: linear-gradient(135deg, #7A4ADF 0%, #360065 100%);
+          background: linear-gradient(135deg, #7a4adf 0%, #360065 100%);
           color: white;
 
           padding: 80px 20px 100px 20px;
@@ -381,8 +494,8 @@ const ItPlusPage = () => {
         }
 
         .our-story-button {
-          background-color: #33FF94;
-          color: #15145F;
+          background-color: #33ff94;
+          color: #15145f;
           border: none;
           padding: 12px 30px;
           border-radius: 25px;
@@ -430,7 +543,6 @@ const ItPlusPage = () => {
           margin-top: 0;
         }
 
-
         .why-choose-us-section .subtitle {
           font-size: 1.4rem;
           color: #000000;
@@ -439,14 +551,17 @@ const ItPlusPage = () => {
 
         .benefits-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); /* Adjusted minmax for better fit */
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(20px, 1fr)
+          ); /* Adjusted minmax for better fit */
           gap: 10px;
           max-width: 1300px;
           margin: 0 auto;
         }
 
         .benefit-card {
-          background: linear-gradient(135deg,#7A4ADF 0%, #360065 100%);
+          background: linear-gradient(135deg, #7a4adf 0%, #360065 100%);
           border-radius: 15px;
           padding: 1px 1px;
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -455,9 +570,7 @@ const ItPlusPage = () => {
           flex-direction: column;
           align-items: center;
           text-align: center;
-          
-          
-          
+
           min-height: 420px;
           width: 200px;
           justify-content: center;
@@ -470,26 +583,29 @@ const ItPlusPage = () => {
         }
 
         .icon-wrapper {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            /* Gradient background as per the design */
-            background: radial-gradient(circle at top left, #a862f9, #7a4adf);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden; /* Ensures the image doesn't spill out */
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          /* Gradient background as per the design */
+          background: radial-gradient(circle at top left, #a862f9, #7a4adf);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          position: relative;
+          overflow: hidden; /* Ensures the image doesn't spill out */
         }
 
-        .benefit-icon { /* Specific class for the image within the wrapper */
-            width: 50px; /* Adjust size of the actual icon image */
-            height: 50px; /* Adjust size of the actual icon image */
-            object-fit: contain; /* Ensures the whole icon is visible without cropping */
-            z-index: 1; /* Make sure the icon is above the background */
-            filter: brightness(1.2); /* Adjust brightness if icons appear too dark on gradient */
+        .benefit-icon {
+          /* Specific class for the image within the wrapper */
+          width: 50px; /* Adjust size of the actual icon image */
+          height: 50px; /* Adjust size of the actual icon image */
+          object-fit: contain; /* Ensures the whole icon is visible without cropping */
+          z-index: 1; /* Make sure the icon is above the background */
+          filter: brightness(
+            1.2
+          ); /* Adjust brightness if icons appear too dark on gradient */
         }
 
         .benefit-card h3 {
@@ -499,6 +615,63 @@ const ItPlusPage = () => {
           margin: 0;
         }
 
+        .clients-section {
+          background-color: #f8f9fa; /* Light background for the section */
+          padding: 80px 20px;
+
+          text-align: center;
+          margin-top: 50px; /* Space from the section above */
+        }
+
+        .clients-container {
+          background-color: #ffffff; /* White card-like background for the content */
+          border-radius: 15px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+          max-width: 1350px;
+          margin: 0 auto;
+          padding: 80px 50px;
+        }
+
+        .clients-section h2 {
+          font-size: 2.5rem;
+          color: #4a00e0; /* Similar to your other headings */
+          margin-bottom: 50px; /* Space between title and logos */
+          font-weight: 600;
+        }
+
+        .clients-grid {
+          display: grid;
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(120px, 1fr)
+          ); /* Adjust minmax for logo size */
+          gap: 30px; /* Space between logos */
+          justify-items: center; /* Center logos within their grid cells */
+          align-items: center; /* Vertically center logos */
+        }
+
+        .client-logo-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* If you want a background/border around each logo, add styles here */
+          /* For now, just ensure the image fills the space and is properly sized */
+          width: 100%; /* Take full width of grid cell */
+          height: 80px; /* Fixed height for consistency */
+          overflow: hidden; /* Hide anything outside */
+        }
+
+        .client-logo {
+          max-width: 100%; /* Ensure logo fits in wrapper */
+          max-height: 80px; /* Ensure logo fits in wrapper */
+          object-fit: contain; /* Contain the entire image within the bounds */
+          opacity: 0.7; /* Slightly faded as per design */
+          transition: opacity 0.3s ease;
+        }
+
+        .client-logo:hover {
+          opacity: 1; /* Full color on hover */
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
