@@ -231,6 +231,40 @@ const ItPlusPage = () => {
         </div>
       </section>
 
+      {/* News and Updates Section - NEW SECTION */}
+      <section className="news-updates-section">
+        <div className="news-updates-container">
+          <h2>News and Updates</h2>
+          <div className="news-cards-grid">
+            <div className="news-card">
+              <img src="/images/news/news-placeholder.png" alt="News Image" className="news-image" />
+              <div className="news-content">
+                <h3>IFS Appoints Shown Jusiter as President, Energy & Resources</h3>
+                <button className="read-article-button">Read article</button>
+              </div>
+            </div>
+            <div className="news-card">
+              <img src="/images/news/news-placeholder.png" alt="News Image" className="news-image" />
+              <div className="news-content">
+                <h3>IFS Appoints Shown Jusiter as President, Energy & Resources</h3>
+                <button className="read-article-button">Read article</button>
+              </div>
+            </div>
+            <div className="news-card">
+              <img src="/images/news/news-placeholder.png" alt="News Image" className="news-image" />
+              <div className="news-content">
+                <h3>IFS Appoints Shown Jusiter as President, Energy & Resources</h3>
+                <button className="read-article-button">Read article</button>
+              </div>
+            </div>
+          </div>
+          <button className="show-more-button">Show More News</button>
+        </div>
+        {/* Wavy background elements */}
+        <div className="wavy-bottom-left"></div>
+        <div className="wavy-bottom-right"></div>
+      </section>
+
       <style jsx>{`
         .it-plus-container {
           font-family: "Inter", sans-serif;
@@ -726,6 +760,183 @@ const ItPlusPage = () => {
 
           .who-is-it-plus-section {
             padding: 60px 15px;
+          }
+        }
+           /* NEW SECTION: News and Updates */
+        .news-updates-section {
+          background-color: #f8f9fa; /* Light background for the section */
+          padding: 80px 20px 0; /* Padding-bottom reduced as wavy elements will define bottom space */
+          text-align: center;
+          position: relative; /* For absolute positioning of wavy elements */
+          overflow: hidden; /* Important for wavy elements */
+        }
+
+        .news-updates-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding-bottom: 80px; /* Space above the wavy background */
+        }
+
+        .news-updates-section h2 {
+          font-size: 2.5rem;
+          color: #4a00e0;
+          margin-bottom: 50px;
+          font-weight: 600;
+        }
+
+        .news-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+          margin-bottom: 50px; /* Space between cards and 'Show More' button */
+          justify-content: center; /* Center cards horizontally if not enough to fill a row */
+        }
+
+        .news-card {
+          background-color: #ffffff;
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          overflow: hidden; /* Ensures image corners are rounded with card */
+          text-align: left;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .news-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-image {
+          width: 100%;
+          height: 200px; /* Fixed height for consistent card appearance */
+          object-fit: cover; /* Cover the area, cropping if necessary */
+          border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
+
+        .news-content {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1; /* Allows content to take up remaining space */
+          justify-content: space-between; /* Pushes button to the bottom */
+        }
+
+        .news-content h3 {
+          font-size: 1.2rem;
+          color: #333;
+          margin-top: 0;
+          margin-bottom: 20px;
+          line-height: 1.4;
+          font-weight: 600;
+        }
+
+        .read-article-button {
+          background-color: #33FF94; /* Green color from your design */
+          color: #15145F; /* Dark blue from your design */
+          border: none;
+          padding: 10px 20px;
+          border-radius: 25px;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-weight: 500;
+          align-self: flex-start; /* Align button to the left */
+        }
+
+        .read-article-button:hover {
+          background-color: #2cdb85; /* Slightly darker green on hover */
+          transform: translateY(-1px);
+        }
+
+        .show-more-button {
+          background-color: #33FF94; /* Green color from your design */
+          color: #15145F; /* Dark blue from your design */
+          border: none;
+          padding: 12px 30px;
+          border-radius: 25px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          font-weight: 500;
+          margin-top: 30px; /* Space above the button */
+        }
+
+        .show-more-button:hover {
+          background-color: #2cdb85;
+          transform: translateY(-2px);
+        }
+
+        /* Wavy background elements */
+        .wavy-bottom-left,
+        .wavy-bottom-right {
+          position: absolute;
+          bottom: -150px; /* Adjust to move the wave up/down */
+          width: 600px; /* Adjust size of the wave */
+          height: 300px; /* Adjust height of the wave */
+          background: linear-gradient(135deg, #33FF94 0%, #00C6FF 100%); /* Example gradient */
+          border-radius: 50%; /* Makes it circular */
+          opacity: 0.7; /* Adjust transparency */
+          filter: blur(50px); /* Soften the edges */
+          z-index: 0; /* Ensure it's behind content */
+        }
+
+        .wavy-bottom-left {
+          left: -200px; /* Position to the left */
+        }
+
+        .wavy-bottom-right {
+          right: -200px; /* Position to the right */
+        }
+
+
+        /* Responsive Design updates */
+        @media (max-width: 768px) {
+          /* ... existing media queries ... */
+
+          .news-cards-grid {
+            grid-template-columns: 1fr; /* Stack news cards on small screens */
+            padding: 0 15px; /* Add some padding for the grid */
+          }
+
+          .wavy-bottom-left,
+          .wavy-bottom-right {
+            width: 400px; /* Smaller waves on mobile */
+            height: 200px;
+            bottom: -100px;
+          }
+
+          .wavy-bottom-left {
+            left: -150px;
+          }
+
+          .wavy-bottom-right {
+            right: -150px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          /* ... existing media queries ... */
+
+          .news-updates-section {
+            padding: 40px 15px 0;
+          }
+
+          .news-updates-section h2 {
+            font-size: 2rem;
+          }
+
+          .news-card h3 {
+            font-size: 1rem;
+          }
+
+          .read-article-button,
+          .show-more-button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
           }
         }
       `}</style>
