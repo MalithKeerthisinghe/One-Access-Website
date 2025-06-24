@@ -1,9 +1,7 @@
 'use client'; // This page uses client-side components (Header, Footer, Lucide icons)
 
-import React from 'react';
-import { Users, Settings } from 'lucide-react';
-import Header from '../components/header'; // Adjust path if your components folder is different
 import Footer from '../components/footer'; // Adjust path if your components folder is different
+import Header from '../components/header'; // Adjust path if your components folder is different
 
 export default function AboutPage() {
   return (
@@ -113,7 +111,7 @@ export default function AboutPage() {
           <div className="services-grid-working-with">
             <div className="service-card-working-with">
               <div className="service-icon-working-with">
-                <Users size={24} color="#4a00e0" /> {/* Icon color */}
+                 <img src="/icons8-team.png" alt="Expert Team Icon" className="custom-service-icon" />
               </div>
               <h3>Expert Team</h3>
               <p>
@@ -123,7 +121,7 @@ export default function AboutPage() {
             </div>
             <div className="service-card-working-with">
               <div className="service-icon-working-with">
-                <Settings size={24} color="#4a00e0" /> {/* Icon color */}
+                <img src="/icons8-service.png" alt="Service Icon" className="custom-service-icon" />
               </div>
               <h3>Service</h3>
               <p>
@@ -260,7 +258,7 @@ export default function AboutPage() {
           background-color: #ffffff;
           padding: 2rem;
           border-radius: 10px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 18px #7A4ADF;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: flex;
           flex-direction: column;
@@ -282,6 +280,13 @@ export default function AboutPage() {
           align-items: center;
           margin-bottom: 1.5rem;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-service-icon {
+            width: 40px; /* Adjust size of your image icons */
+            height: 40px; /* Adjust size of your image icons */
+            object-fit: contain; /* Ensures the whole image is visible */
+            filter: brightness(0.8) saturate(1.5); /* Example filter to make them pop, adjust as needed */
         }
 
         .service-card-working-with h3 {
