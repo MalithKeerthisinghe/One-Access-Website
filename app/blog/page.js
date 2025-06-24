@@ -1,47 +1,101 @@
-'use client';
+"use client"; // Add this line at the top
 
-import React from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import React from "react";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function BlogPage() {
   const latestPosts = [
     {
       id: 1,
-      image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+1',
-      date: 'May 9th, 2023',
-      title: 'The most Popular Business Of the Year',
-      readTime: '2 Min Read',
-      type: 'featured',
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+1",
+      date: "May 9th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+      type: "featured",
     },
     {
       id: 2,
-      image: 'https://placehold.co/150x100/dddddd/000000?text=Small+Post+2',
-      date: 'Apr 19th, 2023',
-      title: 'The most Popular Business Of the Year',
-      readTime: '2 Min Read',
-      type: 'small',
+      image: "https://placehold.co/150x100/dddddd/000000?text=Small+Post+2",
+      date: "Apr 19th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+      type: "small",
     },
     {
       id: 3,
-      image: 'https://placehold.co/150x100/dddddd/000000?text=Small+Post+3',
-      date: 'Apr 12th, 2023',
-      title: 'The most Popular Business Of the Year',
-      readTime: '2 Min Read',
-      type: 'small',
+      image: "https://placehold.co/150x100/dddddd/000000?text=Small+Post+3",
+      date: "Apr 12th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+      type: "small",
     },
   ];
 
   const regularPosts = [
-    { id: 4, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+4', date: 'May 9th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 5, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+5', date: 'Apr 27th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 6, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+6', date: 'Apr 20th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 7, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+7', date: 'May 9th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 8, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+8', date: 'Apr 27th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 9, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+9', date: 'Apr 20th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 10, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+10', date: 'May 9th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 11, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+11', date: 'Apr 27th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
-    { id: 12, image: 'https://placehold.co/400x250/cccccc/000000?text=Blog+Post+12', date: 'Apr 20th, 2023', title: 'The most Popular Business Of the Year', readTime: '2 Min Read' },
+    {
+      id: 4,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+4",
+      date: "May 9th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 5,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+5",
+      date: "Apr 27th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 6,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+6",
+      date: "Apr 20th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 7,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+7",
+      date: "May 9th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 8,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+8",
+      date: "Apr 27th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 9,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+9",
+      date: "Apr 20th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 10,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+10",
+      date: "May 9th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 11,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+11",
+      date: "Apr 27th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
+    {
+      id: 12,
+      image: "https://placehold.co/400x250/cccccc/000000?text=Blog+Post+12",
+      date: "Apr 20th, 2023",
+      title: "The most Popular Business Of the Year",
+      readTime: "2 Min Read",
+    },
   ];
 
   return (
@@ -58,32 +112,48 @@ export default function BlogPage() {
       {/* Latest Post Section */}
       <section className="latest-post-section">
         <div className="container">
-          <div className="section-header-lines">
-            <p className="section-path">Our Blog \</p>
-            <h2>Latest Post</h2>
+          <div className="section-header-stacked">
+            <p className="section-path">\ Our Blog \</p>
+            <h2 className="latest-post-title">Latest Post</h2>
           </div>
           <div className="latest-post-grid">
-            <div className="main-featured-post-card"> {/* Changed class name */}
-              <img src={latestPosts[0].image} alt={latestPosts[0].title} className="post-image" />
+            <div className="main-featured-post-card">
+              {" "}
+              {/* Changed class name */}
+              <img
+                src={latestPosts[0].image}
+                alt={latestPosts[0].title}
+                className="post-image"
+              />
               <div className="post-info">
                 <span className="post-date">{latestPosts[0].date}</span>
                 <h3 className="post-title">{latestPosts[0].title}</h3>
                 <div className="post-meta-bottom">
-                  <span className="post-read-time">{latestPosts[0].readTime}</span>
-                  <a href="#" className="read-more"></a> {/* Keep empty for CSS arrow */}
+                  <span className="post-read-time">
+                    {latestPosts[0].readTime}
+                  </span>
+                  <a href="#" className="read-more"></a>{" "}
+                  {/* Keep empty for CSS arrow */}
                 </div>
               </div>
             </div>
             <div className="side-recent-posts">
               {latestPosts.slice(1).map((post) => (
                 <div key={post.id} className="small-post-card">
-                  <img src={post.image} alt={post.title} className="small-post-image" />
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="small-post-image"
+                  />
                   <div className="small-post-info">
                     <span className="small-post-date">{post.date}</span>
                     <h4 className="small-post-title">{post.title}</h4>
                     <div className="small-post-meta-bottom">
-                      <span className="small-post-read-time">{post.readTime}</span>
-                      <a href="#" className="small-read-more"></a> {/* Keep empty for CSS arrow */}
+                      <span className="small-post-read-time">
+                        {post.readTime}
+                      </span>
+                      <a href="#" className="small-read-more"></a>{" "}
+                      {/* Keep empty for CSS arrow */}
                     </div>
                   </div>
                 </div>
@@ -96,9 +166,10 @@ export default function BlogPage() {
       {/* All Posts Section - Repeating structure for more posts */}
       <section className="all-posts-section">
         <div className="container">
-          <div className="section-header-lines">
-            <p className="section-path">Our Blog \</p>
-            <h2>Latest Post</h2> {/* This seems to be a repeated title as per image */}
+          <div className="section-header-stacked">
+            <p className="section-path">\ Our Blog \</p>
+            <h2>Latest Post</h2>{" "}
+            {/* This seems to be a repeated title as per image */}
           </div>
           <div className="regular-posts-grid">
             {regularPosts.map((post) => (
@@ -122,7 +193,7 @@ export default function BlogPage() {
 
       <style jsx>{`
         .blog-page-container {
-          font-family: 'Inter', sans-serif;
+          font-family: "Inter", sans-serif;
           color: #333;
           line-height: 1.6;
           background-color: #f8f9fa; /* Light gray background for the page */
@@ -144,7 +215,7 @@ export default function BlogPage() {
           overflow: hidden;
           padding-bottom: 120px; /* Space for the curve to dip into */
           border-radius: 0 0 50% 50% / 0 0 100px 100px; /* Downward curve at bottom */
-          box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
+          box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .blog-hero-content h1 {
@@ -174,15 +245,39 @@ export default function BlogPage() {
 
         .section-header-lines h2 {
           font-size: 2.2em;
-          color: #4a00e0; /* Dark purple */
+          color: #000000; 
           font-weight: 600;
           white-space: nowrap;
         }
 
         .section-header-lines .section-path {
-          color: #888;
+          color: #4a00e0;
           font-size: 0.9em;
           margin-right: -10px; /* Pull closer to the H2 */
+        }
+
+        /* Section Header with lines (for Latest Post) */
+        .section-header-stacked {
+          display: flex;
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center horizontally */
+          text-align: center; /* Center text within the stacked block */
+          margin-bottom: 30px;
+          margin-top: 50px;
+        }
+
+        .section-header-stacked .section-path {
+          color: #4a00e0;
+          font-size: 0.9em;
+          margin-bottom: 5px; /* Space between path and title */
+        }
+
+        .section-header-stacked h2 {
+          font-size: 2.2em;
+          color: #000000; /* Dark purple */
+          font-weight: 600;
+          white-space: nowrap;
+          margin-top: 0; /* Remove default top margin */
         }
 
         /* Latest Post Section */
@@ -201,7 +296,8 @@ export default function BlogPage() {
           /* Removed background and padding from grid to put on individual cards */
         }
 
-        .main-featured-post-card { /* Changed class name */
+        .main-featured-post-card {
+          /* Changed class name */
           background-color: #ffffff;
           border-radius: 15px;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
@@ -259,13 +355,13 @@ export default function BlogPage() {
         }
 
         .read-more::after {
-          content: '→'; /* Arrow character */
+          content: "→"; /* Arrow character */
           position: absolute;
           right: 0;
           top: 50%;
           transform: translateY(-50%);
           font-size: 1.2em;
-          color: #33FF94; /* Green for the arrow */
+          color: #33ff94; /* Green for the arrow */
         }
 
         .read-more:hover {
@@ -339,97 +435,95 @@ export default function BlogPage() {
         }
 
         .small-read-more::after {
-          content: '→';
+          content: "→";
           position: absolute;
           right: 0;
           top: 50%;
           transform: translateY(-50%);
           font-size: 1em;
-          color: #33FF94;
+          color: #33ff94;
         }
 
         .small-read-more:hover {
           color: #4a00e0;
         }
 
-
         /* All Posts Section */
         .all-posts-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
+          padding: 80px 0;
+          background-color: #f8f9fa;
         }
 
         .regular-posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
         }
 
         .regular-post-card {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e0e0e0; /* Subtle border */
+          background-color: #ffffff;
+          border-radius: 15px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #e0e0e0; /* Subtle border */
         }
 
         .regular-post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+          transform: translateY(-5px);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
         }
 
         .regular-post-card .post-image {
-            width: 100%;
-            height: 200px; /* Fixed height for consistency */
-            object-fit: cover;
-            border-radius: 15px 15px 0 0; /* Match card top corners */
+          width: 100%;
+          height: 200px; /* Fixed height for consistency */
+          object-fit: cover;
+          border-radius: 15px 15px 0 0; /* Match card top corners */
         }
 
         .regular-post-card .post-info {
-            padding: 20px;
-            text-align: left;
+          padding: 20px;
+          text-align: left;
         }
 
         .regular-post-card .post-date {
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 5px;
-            display: block;
+          font-size: 0.9em;
+          color: #888;
+          margin-bottom: 5px;
+          display: block;
         }
 
         .regular-post-card .post-title {
-            font-size: 1.3em;
-            color: #4a00e0; /* Purple for title */
-            line-height: 1.4;
-            margin-bottom: 15px;
-            font-weight: 600;
+          font-size: 1.3em;
+          color: #4a00e0; /* Purple for title */
+          line-height: 1.4;
+          margin-bottom: 15px;
+          font-weight: 600;
         }
 
         .regular-post-card .read-more {
-            color: #360065;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            position: relative;
-            padding-right: 25px; /* Space for arrow */
+          color: #360065;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s ease;
+          position: relative;
+          padding-right: 25px; /* Space for arrow */
         }
         .regular-post-card .read-more::after {
-            content: '→';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.2em;
-            color: #33FF94;
+          content: "→";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.2em;
+          color: #33ff94;
         }
 
         .regular-post-card .read-more:hover {
-            color: #4a00e0;
+          color: #4a00e0;
         }
-
 
         /* Responsive Adjustments */
         @media (max-width: 992px) {
