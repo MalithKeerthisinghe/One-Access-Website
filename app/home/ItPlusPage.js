@@ -265,6 +265,45 @@ const ItPlusPage = () => {
         <div className="wavy-bottom-right"></div>
       </section>
 
+      <section className="testimonials-section">
+        <div className="testimonials-container">
+          <h2>What Our Clients Say</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div> {/* You can use actual star icons or font awesome if available */}
+              <p>
+                Yet preference connection unpleasant yet melancholy but end appearance.
+                And excellence partiality estimating terminated day everything.
+              </p>
+              <h4>Sabo Mastiles</h4>
+              <span>Founder @ Rolex</span>
+            </div>
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div>
+              <p>
+                Yet preference connection unpleasant yet melancholy but end appearance.
+                And excellence partiality estimating terminated day everything.
+              </p>
+              <h4>Sam</h4>
+              <span>Founder @ Migalka</span>
+            </div>
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div>
+              <p>
+                Yet preference connection unpleasant yet melancholy but end appearance.
+                And excellence partiality estimating terminated day everything.
+              </p>
+              <h4>Mansur</h4>
+              <span>Founder @ Google</span>
+            </div>
+          </div>
+          <div className="get-in-touch-text">
+            <p>Get in touch with us. Our experienced team is happily waiting to hear from you</p>
+          </div>
+          <button className="send-inquiry-button">Send Us an Inquiry</button>
+        </div>
+      </section>
+
       <style jsx>{`
         .it-plus-container {
           font-family: "Inter", sans-serif;
@@ -937,6 +976,129 @@ const ItPlusPage = () => {
           .show-more-button {
             padding: 10px 20px;
             font-size: 0.9rem;
+          }
+        }
+          /* NEW SECTION: What Our Clients Say (Testimonials) */
+        .testimonials-section {
+          background-color: #f8f9fa; /* Light background for the section */
+          padding: 80px 20px;
+          text-align: center;
+        }
+
+        .testimonials-container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .testimonials-section h2 {
+          font-size: 2.5rem;
+          color: #4a00e0;
+          margin-bottom: 50px;
+          font-weight: 600;
+        }
+
+        .testimonials-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+          margin-bottom: 50px;
+          justify-content: center;
+        }
+
+        .testimonial-card {
+          background-color: #ffffff;
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          padding: 30px;
+          text-align: left;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 1px solid #e0e0e0; /* Subtle border as seen in the design */
+        }
+
+        .testimonial-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 24px #7A4ADF;
+        }
+
+        .testimonial-card .stars {
+          color: #ffc107; /* Gold color for stars */
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+          letter-spacing: 2px; /* Space out the stars a bit */
+        }
+
+        .testimonial-card p {
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.7;
+          margin-bottom: 25px;
+        }
+
+        .testimonial-card h4 {
+          font-size: 1.1rem;
+          color: #333;
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+
+        .testimonial-card span {
+          font-size: 0.9rem;
+          color: #888;
+        }
+
+        .get-in-touch-text {
+          margin-top: 50px;
+          margin-bottom: 30px;
+        }
+
+        .get-in-touch-text p {
+          font-size: 1.2rem;
+          color: #333;
+          font-weight: 500;
+        }
+
+        .send-inquiry-button {
+          background-color: #33FF94; /* Green color from your design */
+          color: #15145F; /* Dark blue from your design */
+          border: none;
+          padding: 12px 30px;
+          border-radius: 25px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          font-weight: 500;
+        }
+
+        .send-inquiry-button:hover {
+          background-color: #2cdb85;
+          transform: translateY(-2px);
+        }
+
+        /* Responsive Design updates */
+        @media (max-width: 768px) {
+          /* ... existing media queries ... */
+
+          .testimonials-section h2 {
+            font-size: 2rem;
+          }
+
+          .testimonials-grid {
+            grid-template-columns: 1fr; /* Stack testimonials on small screens */
+            padding: 0 15px;
+          }
+
+          .get-in-touch-text p {
+            font-size: 1rem;
+            padding: 0 15px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          /* ... existing media queries ... */
+
+          .testimonials-section {
+            padding: 60px 15px;
           }
         }
       `}</style>
