@@ -5,7 +5,7 @@ const ItPlusPage = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1>SIMPLIFYING IT WITH </h1>
-          <img src="/logo_r.png" alt="aaa" className="it-plus-logo" />
+          <img src="/logo_r.png" alt="aaa" className="it-plus-logo"  style={{ width: "150px", height: "150px", marginLeft: "10px" }}  />
           <p>Where Technology, Innovation, and Training Meet</p>
           <br />
           <div className="hero-buttons">

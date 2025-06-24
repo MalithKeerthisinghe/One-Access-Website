@@ -1,7 +1,7 @@
-'use client'; // This component uses client-side features (lucide-react, useState)
+"use client"; // This component uses client-side features (lucide-react, useState)
 
-import React, { useState } from 'react'; // Import useState
-import { Search } from 'lucide-react';
+import { Search } from "lucide-react";
+import { useState } from "react"; // Import useState
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,8 +11,11 @@ export default function Header() {
       <div className="container">
         <div className="header-content">
           <a href="/" className="logo">
-            <span className="logo-icon">IT</span>
-            PLUS
+            <img
+              src="/logo_of_it_plus.png"
+              alt="IT PLUS Logo"
+              className="logo-image"
+            />
           </a>
           <nav>
             <ul className="nav">
@@ -22,7 +25,9 @@ export default function Header() {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <a href="/about" className="dropbtn">About Us</a>
+                <a href="/about" className="dropbtn">
+                  About Us
+                </a>
                 {isDropdownOpen && (
                   <div className="dropdown-content">
                     <a href="/about">About Us</a>
@@ -31,14 +36,28 @@ export default function Header() {
                   </div>
                 )}
               </li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#academic">Academic</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/gallery">Gallery</a></li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#academic">Academic</a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href="/gallery">Gallery</a>
+              </li>
               {/* Contact Us button remains distinct */}
-              <li><a href="#contact" className="contact-btn">Contact Us</a></li>
+              <li>
+                <a href="#contact" className="contact-btn">
+                  Contact Us
+                </a>
+              </li>
               {/* Removed size prop to allow CSS to control it fully */}
-              <li><Search className="search-icon" /></li>
+              <li>
+                <Search className="search-icon" />
+              </li>
             </ul>
           </nav>
         </div>
@@ -47,7 +66,7 @@ export default function Header() {
       <style jsx>{`
         .header {
           background-color: #360065; /* Dark purple background */
-          padding: 1rem 0;
+          padding: 0.5rem 0;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
           position: sticky;
           top: 0;
@@ -66,22 +85,36 @@ export default function Header() {
           align-items: center;
         }
 
-        .logo {
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: white;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 5px;
+        // .logo {
+        //   /* Remove or adjust these if not needed for the image logo */
+        //   font-size: 1.8rem;
+        //   font-weight: 700;
+        //   color: white;
+        //   text-decoration: none;
+        //   display: flex;
+        //   align-items: center;
+        //   gap: 5px;
+        // }
+
+        /* Remove .logo-icon styles as it's no longer used */
+
+        // .logo-icon {
+        //   background-color: #4a00e0;
+        //   color: white;
+        //   padding: 0.2rem 0.5rem;
+        //   border-radius: 5px;
+        //   font-size: 1.2rem;
+        // }
+
+        .logo-image {
+          height: 70px; /* Adjust height as needed for your logo */
+          width: auto; /* Maintain aspect ratio */
+          object-fit: contain; /* Ensures the whole image is visible */
         }
 
-        .logo-icon {
-          background-color: #4a00e0;
-          color: white;
-          padding: 0.2rem 0.5rem;
-          border-radius: 5px;
-          font-size: 1.2rem;
+        /* You might want to adjust .logo gap or alignment if the image doesn't look right */
+        .logo {
+          gap: 0; /* Remove gap if the image is already designed with space */
         }
 
         .nav {
@@ -104,7 +137,12 @@ export default function Header() {
 
         .nav li a:hover {
           color: #4a00e0; /* Dark purple text on hover */
-          background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.9
+          ); /* Slightly transparent white background */
         }
 
         /* Dropdown specific styles */
@@ -121,7 +159,7 @@ export default function Header() {
           position: absolute;
           background-color: #360065;
           min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           z-index: 1;
           top: 100%;
           left: 0;
@@ -150,7 +188,7 @@ export default function Header() {
           padding: 0.5rem 1rem;
           border-radius: 20px;
           transition: background-color 0.3s ease, border-color 0.3s ease;
-          border: 2px solid #33FF94;
+          border: 2px solid #33ff94;
         }
 
         .contact-btn:hover {
@@ -205,7 +243,7 @@ export default function Header() {
           }
 
           .dropdown-content a:hover {
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
           }
         }
       `}</style>
