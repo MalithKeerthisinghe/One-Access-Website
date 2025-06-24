@@ -17,7 +17,7 @@ const ItPlusPage = () => {
 
       {/* What We Do Section */}
       <section className="what-we-do-section">
-        <h2>What We Do</h2>
+        <h2>------------------------ What We Do --------------------</h2>,
         <p className="subtitle">Expert to Make IT Perfect</p>
         <div className="services-grid">
           <div className="service-card technology">
@@ -50,7 +50,14 @@ const ItPlusPage = () => {
       {/* Who is IT Plus Section */}
       <section className="who-is-it-plus-section">
         <div className="who-is-content">
-          <h2>Who is IT Plus</h2>
+          <div className="title-row">
+            <h2>
+              Who is
+              <img
+                src="/logo_r.png" alt="IT Plus Logo" className="who-is-logo" style={{ width: '100px', height: '100px', marginLeft: '10px' }
+  }/>
+            </h2>
+          </div>
           <p>
             In today&apos;s fast-paced digital world, your business needs more
             than just technology—it needs a trusted partner. That&apos;s what IT
@@ -60,36 +67,52 @@ const ItPlusPage = () => {
             and stay connected.
           </p>
           <button className="our-story-button">Our Story</button>
+          {/* <div className="image-row">
+            <img src="/Vector11.png" alt="Vector 11" className="vector-image" />
+            <img src="/Vector12.png" alt="Vector 12" className="vector-image" />
+          </div> */}
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="why-choose-us-section">
+<section className="why-choose-us-section">
         <h2>Why Choose Us</h2>
         <p className="subtitle">Your Trusted IT Partner in Sri Lanka</p>
         <div className="benefits-grid">
           <div className="benefit-card">
-            <div className="icon-placeholder">👤</div>
+            <div className="icon-wrapper">
+              <img src="/expert-team.png" alt="Expert Team Icon" className="benefit-icon" />
+            </div>
             <h3>Expert Team</h3>
           </div>
           <div className="benefit-card">
-            <div className="icon-placeholder">💡</div>
+            <div className="icon-wrapper">
+              <img src="/innovative-solutions.png" alt="Innovative Solutions Icon" className="benefit-icon" />
+            </div>
             <h3>Innovative Solutions</h3>
           </div>
           <div className="benefit-card">
-            <div className="icon-placeholder">⏰</div>
+            <div className="icon-wrapper">
+              <img src="/24x7-support.png" alt="24x7 Support Icon" className="benefit-icon" />
+            </div>
             <h3>24x7 Support</h3>
           </div>
           <div className="benefit-card">
-            <div className="icon-placeholder">⭐</div>
+            <div className="icon-wrapper">
+              <img src="/focus-on-quality.png" alt="Focus on Quality Icon" className="benefit-icon" />
+            </div>
             <h3>Focus on Quality</h3>
           </div>
           <div className="benefit-card">
-            <div className="icon-placeholder">🎓</div>
+            <div className="icon-wrapper">
+              <img src="/certified-trainers.png" alt="Certified Trainers Icon" className="benefit-icon" />
+            </div>
             <h3>Certified Trainers</h3>
           </div>
           <div className="benefit-card">
-            <div className="icon-placeholder">💼</div>
+            <div className="icon-wrapper">
+              <img src="/job-placement.png" alt="Job Placement Icon" className="benefit-icon" />
+            </div>
             <h3>Job Placement</h3>
           </div>
         </div>
@@ -97,7 +120,7 @@ const ItPlusPage = () => {
 
       <style jsx>{`
         .it-plus-container {
-          font-family: 'Inter', sans-serif;
+          font-family: "Inter", sans-serif;
           color: #333;
           line-height: 1.6;
           margin: 0;
@@ -106,17 +129,15 @@ const ItPlusPage = () => {
 
         /* Hero Section */
         .hero-section {
-          background: linear-gradient(135deg, #7A4ADF 0%, #360065 100%);
+          background: linear-gradient(135deg, #7a4adf 0%, #360065 100%);
           color: white;
           width: 106%;
-          padding: 180px 10px 10px 300px
-          ;
+          padding: 180px 10px 10px 300px;
           text-align: center;
           position: relative;
           overflow: hidden;
           border-radius: 0 0 50% 50% / 0 0 100px 100px;
-          box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
-          
+          box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .hero-content {
@@ -131,13 +152,13 @@ const ItPlusPage = () => {
           letter-spacing: 1px;
           font-weight: 700;
           margin-top: 0;
-          font-family: 'Outfit';
+          font-family: "Outfit";
         }
 
         .hero-section p {
           font-size: 1.4rem;
           margin-bottom: 30px;
-          font_family: 'outfit';
+          font_family: "outfit";
           opacity: 0.9;
         }
 
@@ -180,7 +201,10 @@ const ItPlusPage = () => {
 
         /* What We Do Section */
         .what-we-do-section {
+          line-height: 1;
           text-align: center;
+          text-family: "Outfit";
+          font-size: 2rem;
           padding: 80px 20px;
           background-color: #f8f9fa;
           position: relative;
@@ -197,7 +221,7 @@ const ItPlusPage = () => {
         }
 
         .what-we-do-section .subtitle {
-          font-size: 1.1rem;
+          font-size: 1.6rem;
           color: #666;
           margin-bottom: 50px;
         }
@@ -233,36 +257,43 @@ const ItPlusPage = () => {
         }
 
         .service-card::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover;
+          background: url("https://images.unsplash.com/photo-1518770660439-4636190af475")
+            center/cover;
           filter: brightness(0.6);
           z-index: 0;
           border-radius: 15px;
         }
 
-        .service-card.technology::before { 
-          background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b') center/cover;
+        .service-card.technology::before {
+          background: url("https://images.unsplash.com/photo-1488590528505-98d2b5aba04b")
+            center/cover;
           // background-image: url('/images/technology-bg.png');
         }
-        .service-card.cloud::before { 
-          background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5') center/cover;
+        .service-card.cloud::before {
+          background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5")
+            center/cover;
         }
-        .service-card.software::before { 
-          background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6') center/cover;
+        .service-card.software::before {
+          background: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6")
+            center/cover;
         }
-        .service-card.it-support::before { 
-          background: url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7') center/cover;
+        .service-card.it-support::before {
+          background: url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7")
+            center/cover;
         }
-        .service-card.it-products::before { 
-          background: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e') center/cover;
+        .service-card.it-products::before {
+          background: url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e")
+            center/cover;
         }
-        .service-card.academic::before { 
-          background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158') center/cover;
+        .service-card.academic::before {
+          background: url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158")
+            center/cover;
         }
 
         .service-card h3 {
@@ -277,8 +308,8 @@ const ItPlusPage = () => {
         .card-image-placeholder {
           width: 60px;
           height: 60px;
-          background-color:  #440B44;;
-          
+          background-color: #440b44;
+
           border-radius: 50%;
           margin-bottom: 20px;
           display: flex;
@@ -290,30 +321,31 @@ const ItPlusPage = () => {
           backdrop-filter: blur(10px);
         }
 
-
-.card-image-placeholder::after {
-    content: '➠'; /* Green right arrow */ 
-    font-size: 2.2rem;
-    color:rgb(20, 218, 99); /* Match the green arrow color from the design */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-
-
+        .card-image-placeholder::after {
+          content: "➠"; /* Green right arrow */
+          font-size: 2.2rem;
+          color: rgb(
+            20,
+            218,
+            99
+          ); /* Match the green arrow color from the design */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
 
         /* Who is IT Plus Section */
         .who-is-it-plus-section {
-          background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+          background: linear-gradient(135deg, #7A4ADF 0%, #360065 100%);
           color: white;
-          padding: 80px 20px;
+
+          padding: 80px 20px 100px 20px;
           text-align: center;
           position: relative;
-          margin: 80px 20px;
+          margin: 20px 10px;
           border-radius: 15px;
-          max-width: 1000px;
+          max-width: 1500px;
           margin-left: auto;
           margin-right: auto;
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -324,23 +356,33 @@ const ItPlusPage = () => {
           margin: 0 auto;
         }
 
+        .title-row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px; /* Space between h2 and logo */
+          margin-bottom: 20px; /* Space before the paragraph */
+        }
+
         .who-is-it-plus-section h2 {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
           margin-bottom: 20px;
           font-weight: 600;
           margin-top: 0;
         }
 
         .who-is-it-plus-section p {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
+          font-family: "Outfit";
+          font-weight: 100;
           margin-bottom: 30px;
           line-height: 1.8;
           opacity: 0.9;
         }
 
         .our-story-button {
-          background-color: white;
-          color: #4a00e0;
+          background-color: #33FF94;
+          color: #15145F;
           border: none;
           padding: 12px 30px;
           border-radius: 25px;
@@ -355,6 +397,21 @@ const ItPlusPage = () => {
           background-color: #f0f0f0;
           transform: translateY(-2px);
           color: #333;
+        }
+
+        .image-row {
+          display: flex;
+          justify-content: center;
+          gap: 20px; /* Space between the two images */
+          margin-top: 20px; /* Space after button */
+        }
+
+        .vector-image {
+          height: 50px; /* Adjust height as needed */
+          width: auto; /* Maintain aspect ratio */
+          display: inline-block;
+          vertical-align: between;
+          border-radius: 0; /* Ensure no circular shape */
         }
 
         /* Why Choose Us Section */
@@ -373,31 +430,36 @@ const ItPlusPage = () => {
           margin-top: 0;
         }
 
+
         .why-choose-us-section .subtitle {
-          font-size: 1.1rem;
-          color: #666;
+          font-size: 1.4rem;
+          color: #000000;
           margin-bottom: 50px;
         }
 
         .benefits-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 30px;
-          max-width: 1200px;
+          grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); /* Adjusted minmax for better fit */
+          gap: 10px;
+          max-width: 1300px;
           margin: 0 auto;
         }
 
         .benefit-card {
-          background-color: #ffffff;
+          background: linear-gradient(135deg,#7A4ADF 0%, #360065 100%);
           border-radius: 15px;
-          padding: 30px 20px;
+          padding: 1px 1px;
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
-          min-height: 220px;
+          
+          
+          
+          min-height: 420px;
+          width: 200px;
           justify-content: center;
           cursor: pointer;
         }
@@ -407,26 +469,36 @@ const ItPlusPage = () => {
           box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
-        .icon-placeholder {
-          width: 80px;
-          height: 80px;
-          background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
-          border-radius: 50%;
-          margin-bottom: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          color: white;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            /* Gradient background as per the design */
+            background: radial-gradient(circle at top left, #a862f9, #7a4adf);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden; /* Ensures the image doesn't spill out */
+        }
+
+        .benefit-icon { /* Specific class for the image within the wrapper */
+            width: 50px; /* Adjust size of the actual icon image */
+            height: 50px; /* Adjust size of the actual icon image */
+            object-fit: contain; /* Ensures the whole icon is visible without cropping */
+            z-index: 1; /* Make sure the icon is above the background */
+            filter: brightness(1.2); /* Adjust brightness if icons appear too dark on gradient */
         }
 
         .benefit-card h3 {
           font-size: 1.4rem;
-          color: #333;
-          font-weight: 500;
+          color: white;
+          font-weight: 500; /* Medium weight, adjust as needed */
           margin: 0;
         }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
